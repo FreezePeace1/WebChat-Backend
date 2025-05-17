@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPBackend.Api", "SIPBackend.Api\SIPBackend.Api.csproj", "{BE646337-1C62-4E1A-A6DD-3355684795DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{934AE3C9-8324-4F0F-A88E-B8C47CD91B3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B36010E0-666D-4987-8805-E9A04EB4601A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C868BE42-3647-470D-A71F-4D46C319BCAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPBackend.Domain", "SIPBackend.Domain\SIPBackend.Domain.csproj", "{10D5A4A7-ACAF-45DA-8962-B60E2FA6B335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPBackend.Application", "SIPBackend.Application\SIPBackend.Application.csproj", "{EA1E4318-FF65-483F-9B34-D1B47BE7C774}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPBackend.DAL", "SIPBackend.DAL\SIPBackend.DAL.csproj", "{4B552665-795D-4E27-B733-0916F445041C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{34CE3E67-75EE-4F36-BA5F-80A76F560FF9}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE646337-1C62-4E1A-A6DD-3355684795DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE646337-1C62-4E1A-A6DD-3355684795DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE646337-1C62-4E1A-A6DD-3355684795DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE646337-1C62-4E1A-A6DD-3355684795DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10D5A4A7-ACAF-45DA-8962-B60E2FA6B335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D5A4A7-ACAF-45DA-8962-B60E2FA6B335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D5A4A7-ACAF-45DA-8962-B60E2FA6B335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D5A4A7-ACAF-45DA-8962-B60E2FA6B335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA1E4318-FF65-483F-9B34-D1B47BE7C774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA1E4318-FF65-483F-9B34-D1B47BE7C774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA1E4318-FF65-483F-9B34-D1B47BE7C774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA1E4318-FF65-483F-9B34-D1B47BE7C774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B552665-795D-4E27-B733-0916F445041C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B552665-795D-4E27-B733-0916F445041C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B552665-795D-4E27-B733-0916F445041C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B552665-795D-4E27-B733-0916F445041C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE646337-1C62-4E1A-A6DD-3355684795DE} = {934AE3C9-8324-4F0F-A88E-B8C47CD91B3F}
+		{10D5A4A7-ACAF-45DA-8962-B60E2FA6B335} = {C868BE42-3647-470D-A71F-4D46C319BCAD}
+		{EA1E4318-FF65-483F-9B34-D1B47BE7C774} = {C868BE42-3647-470D-A71F-4D46C319BCAD}
+		{4B552665-795D-4E27-B733-0916F445041C} = {B36010E0-666D-4987-8805-E9A04EB4601A}
+	EndGlobalSection
+EndGlobal

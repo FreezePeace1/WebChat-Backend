@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  sipbackend-api:
+    build:
+      context: "/home/alexander/RiderProjects/SIPBackend"
+      dockerfile: "SIPBackend.Api/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/SIPBackend.Api.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "sipbackend.api:dev"
+    ports: []
+    volumes:
+    - "/home/alexander/.microsoft/usersecrets:/home/app/.microsoft/usersecrets"
+    - "/home/alexander/.nuget/packages:/home/app/.nuget/packages"
+    - "/home/alexander/RiderProjects/SIPBackend/SIPBackend.Api:/app:rw"
+    - "/home/alexander/RiderProjects/SIPBackend:/src:rw"
+    working_dir: "/app"

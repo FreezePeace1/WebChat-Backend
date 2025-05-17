@@ -1,0 +1,17 @@
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/bin/Debug/net8.0/SIPBackend.DAL.deps.json
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/bin/Debug/net8.0/SIPBackend.DAL.runtimeconfig.json
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/bin/Debug/net8.0/SIPBackend.DAL.dll
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/bin/Debug/net8.0/SIPBackend.DAL.pdb
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/bin/Debug/net8.0/SIPBackend.Domain.dll
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/bin/Debug/net8.0/SIPBackend.Domain.pdb
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.csproj.AssemblyReference.cache
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.GeneratedMSBuildEditorConfig.editorconfig
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.AssemblyInfoInputs.cache
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.AssemblyInfo.cs
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.csproj.CoreCompileInputs.cache
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.csproj.CopyComplete
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.dll
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/refint/SIPBackend.DAL.dll
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.pdb
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.genruntimeconfig.cache
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/ref/SIPBackend.DAL.dll

@@ -1,0 +1,107 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="FailedToRegisterUser" xml:space="preserve">
+        <value>Failed to regiter user</value>
+    </data>
+    <data name="FailedToLoginUser" xml:space="preserve">
+        <value>Failed to login user</value>
+    </data>
+    <data name="FailedToChangeInfo" xml:space="preserve">
+        <value>Failed to change info</value>
+    </data>
+    <data name="FailedToSendMessageWithResettingToken" xml:space="preserve">
+        <value>Failed to send message with resetting token</value>
+    </data>
+    <data name="FailedToResetPassword" xml:space="preserve">
+        <value>Failed to reset password</value>
+    </data>
+    <data name="FailedToGetAccountInfo" xml:space="preserve">
+        <value>Failed to get account info</value>
+    </data>
+    <data name="UserAlreadyExists" xml:space="preserve">
+        <value>User already exists</value>
+    </data>
+    <data name="PasswordsAreNotEqual" xml:space="preserve">
+        <value>Passwords are not equal</value>
+    </data>
+    <data name="ModelCreatingIsFailed" xml:space="preserve">
+        <value>Model creating is failed</value>
+    </data>
+    <data name="FailedToLogout" xml:space="preserve">
+        <value>Failed to logout</value>
+    </data>
+    <data name="UserNotExists" xml:space="preserve">
+        <value>User not exists</value>
+    </data>
+    <data name="IncorrectCredentials" xml:space="preserve">
+        <value>Check your credentials</value>
+    </data>
+    <data name="UserAreNotAuthorized" xml:space="preserve">
+        <value>User are not authorized</value>
+    </data>
+    <data name="FailedToChangeUserInfo" xml:space="preserve">
+        <value>Failed to change user info</value>
+    </data>
+    <data name="TokensAreNotEqual" xml:space="preserve">
+        <value>Tokens are not equal</value>
+    </data>
+    <data name="ResettingPasswordTokenIsInvalid" xml:space="preserve">
+        <value>Resetting password token is invalid</value>
+    </data>
+    <data name="FailedToSendMessage" xml:space="preserve">
+        <value>Failed to send message</value>
+    </data>
+    <data name="FailedToAddNewFriend" xml:space="preserve">
+        <value>Failed to add new friend</value>
+    </data>
+    <data name="FailedToGetFriends" xml:space="preserve">
+        <value>Failed to get friends</value>
+    </data>
+    <data name="FailedToDeleteFriend" xml:space="preserve">
+        <value>Failed to delete friend</value>
+    </data>
+    <data name="FailedToFindFriend" xml:space="preserve">
+        <value>Failed to find friend</value>
+    </data>
+    <data name="UsersAreAlreadyFriends" xml:space="preserve">
+        <value>Users are already friends</value>
+    </data>
+    <data name="UsersAreNotFriends" xml:space="preserve">
+        <value>Users are not friends</value>
+    </data>
+    <data name="FailedToAcceptRequest" xml:space="preserve">
+        <value>Failed to accept request</value>
+    </data>
+    <data name="FailedToGetAllUsersWithRequests" xml:space="preserve">
+        <value>Failed to get all users with requests</value>
+    </data>
+    <data name="FailedToGetUserInfo" xml:space="preserve">
+        <value>Failed to get user info</value>
+    </data>
+    <data name="FailedToGetRefreshToken" xml:space="preserve">
+        <value>Faield to get refresh token</value>
+    </data>
+    <data name="FailedToGetAllMessages" xml:space="preserve">
+        <value>Failed to get all messages</value>
+    </data>
+    <data name="GettingChatInfoIsFailed" xml:space="preserve">
+        <value>Getting chat info is failed</value>
+    </data>
+    <data name="ChatDoesNotExist" xml:space="preserve">
+        <value>Chat does not exist</value>
+    </data>
+    <data name="TheseChatParticipantsDoNotExist" xml:space="preserve">
+        <value>These chat participants do not exist</value>
+    </data>
+</root>

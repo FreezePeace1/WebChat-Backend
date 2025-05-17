@@ -1,0 +1,33 @@
+﻿services:
+  sipbackend-api:
+    build:
+      context: .
+      dockerfile: SIPBackend.Api/Dockerfile
+    container_name: sipbackend-api
+    ports:
+      - "5022:8080"
+    depends_on:
+      - sipbackend-db
+    
+  sipbackend-db:
+    image: postgres:latest
+    container_name: sipbackend-db
+    ports:
+      - "5400:5432"
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=sipbackend-db
+    volumes:
+      -  sipbackend-db:/var/lib/postgresql/data
+  
+  sipbackend-redis:
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+volumes:
+  sipbackend-db:
+    name: sipbackend-db
+  

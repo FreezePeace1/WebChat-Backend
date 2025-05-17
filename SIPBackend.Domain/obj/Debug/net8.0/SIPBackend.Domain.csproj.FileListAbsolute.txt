@@ -1,0 +1,15 @@
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/bin/Debug/net8.0/SIPBackend.Domain.deps.json
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/bin/Debug/net8.0/SIPBackend.Domain.dll
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/bin/Debug/net8.0/SIPBackend.Domain.pdb
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/SIPBackend.Domain.csproj.AssemblyReference.cache
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/SIPBackend.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/SIPBackend.Domain.AssemblyInfoInputs.cache
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/SIPBackend.Domain.AssemblyInfo.cs
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/SIPBackend.Domain.csproj.CoreCompileInputs.cache
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/SIPBackend.Domain.dll
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/refint/SIPBackend.Domain.dll
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/SIPBackend.Domain.pdb
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/ref/SIPBackend.Domain.dll
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.xml
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/SIPBackend.Domain.csproj.CopyComplete

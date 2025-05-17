@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "YeYxItzKT+tmCvmEYiNxA8/DPhEhlfOTFJojbmhygm0=",
+  "Source": "SIPBackend.Api",
+  "BasePath": "_content/SIPBackend.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
