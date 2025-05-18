@@ -18,7 +18,7 @@ public class RelationshipsController : ControllerBase
 
     [HttpPost]
     [Authorize]
-    public async Task<ActionResult<ResponseDto>> MakeRelationship(MakeRelationshipDto dto)
+    public async Task<ActionResult<ResponseDto>> MakeRelationship([FromBody] MakeRelationshipDto dto)
     {
         var result = await _relationshipsService.MakeRelationship(dto);
 
@@ -46,7 +46,7 @@ public class RelationshipsController : ControllerBase
 
     [HttpDelete]
     [Authorize]
-    public async Task<ActionResult<ResponseDto>> DeleteFriend(FriendWithIdDto withIdDto)
+    public async Task<ActionResult<ResponseDto>> DeleteFriend([FromQuery] FriendWithIdDto withIdDto)
     {
         var result = await _relationshipsService.DeleteFriend(withIdDto);
 
@@ -59,7 +59,7 @@ public class RelationshipsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<ResponseDto>> FindFriend(FindFriendDto dto)
+    public async Task<ActionResult<ResponseDto>> FindFriend([FromQuery] FindFriendDto dto)
     {
         var result = await _relationshipsService.FindFriend(dto);
 
@@ -73,7 +73,7 @@ public class RelationshipsController : ControllerBase
 
     [HttpPut]
     [Authorize]
-    public async Task<ActionResult<ResponseDto>> AcceptFriendRequest(FriendWithIdDto withIdDto)
+    public async Task<ActionResult<ResponseDto>> AcceptFriendRequest([FromBody] FriendWithIdDto withIdDto)
     {
         var result = await _relationshipsService.AcceptFriendRequest(withIdDto);
 

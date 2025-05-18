@@ -82,7 +82,7 @@
         <value>Failed to find friend</value>
     </data>
     <data name="UsersAreAlreadyFriends" xml:space="preserve">
-        <value>Users are already friends</value>
+        <value>Users are already friends or request on friendship already is sent!</value>
     </data>
     <data name="UsersAreNotFriends" xml:space="preserve">
         <value>Users are not friends</value>

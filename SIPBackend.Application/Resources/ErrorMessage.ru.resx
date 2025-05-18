@@ -75,7 +75,7 @@
         <value>Не удалось удалить друга</value>
     </data>
     <data name="UsersAreAlreadyFriends" xml:space="preserve">
-        <value>Пользователи уже друзья</value>
+        <value>Пользователи уже друзья или запрос на дружбу уже отправлен</value>
     </data>
     <data name="UsersAreNotFriends" xml:space="preserve">
         <value>Пользователи не являются друзьями</value>
