@@ -12,4 +12,5 @@
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/ref/SIPBackend.Domain.dll
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.xml
-/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/SIPBackend.Domain.csproj.CopyComplete
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/SIPBackend.Domain.sourcelink.json
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/obj/Debug/net8.0/SIPBacke.9771D5E6.Up2Date

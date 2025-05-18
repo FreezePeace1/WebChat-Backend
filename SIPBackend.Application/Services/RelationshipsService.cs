@@ -201,7 +201,7 @@ public class RelationshipsService : IRelationshipsService
                     ErrorCode = (int)ErrorCodes.UserNotExists
                 };
             }
-
+            
             return new ResponseDto<FriendInfo>()
             {
                 Data = new FriendInfo(user.UserName,user.Id),

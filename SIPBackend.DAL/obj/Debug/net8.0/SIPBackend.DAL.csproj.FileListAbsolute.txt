@@ -9,9 +9,10 @@
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.AssemblyInfoInputs.cache
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.AssemblyInfo.cs
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.csproj.CoreCompileInputs.cache
-/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.csproj.CopyComplete
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.dll
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/refint/SIPBackend.DAL.dll
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.pdb
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.genruntimeconfig.cache
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/ref/SIPBackend.DAL.dll
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBackend.DAL.sourcelink.json
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/Debug/net8.0/SIPBacke.3BBE4698.Up2Date

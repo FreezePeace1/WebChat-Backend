@@ -25,7 +25,6 @@
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.SIPBackend.Api.props
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/obj/Debug/net8.0/staticwebassets.pack.json
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/obj/Debug/net8.0/scopedcss/bundle/SIPBackend.Api.styles.css
-/home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/obj/Debug/net8.0/SIPBackend.Api.csproj.CopyComplete
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/obj/Debug/net8.0/SIPBackend.Api.dll
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/obj/Debug/net8.0/refint/SIPBackend.Api.dll
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/obj/Debug/net8.0/SIPBackend.Api.pdb
@@ -161,3 +160,8 @@
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/bin/Debug/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/bin/Debug/net8.0/Pipelines.Sockets.Unofficial.dll
 /home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/bin/Debug/net8.0/StackExchange.Redis.dll
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/bin/Debug/net8.0/SIPBackend.Api.staticwebassets.endpoints.json
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/obj/Debug/net8.0/SIPBackend.Api.sourcelink.json
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/obj/Debug/net8.0/staticwebassets/msbuild.SIPBackend.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/home/alexander/RiderProjects/SIPBackend/SIPBackend.Api/obj/Debug/net8.0/SIPBacke.B2798B3D.Up2Date
