@@ -42,16 +42,18 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<RefreshTokenMiddleware>();
 
 app.UseCors(opts => opts
-    .WithOrigins("http://localhost:5173")
+    .WithOrigins("http://localhost:5173","https://localhost:5173")
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials());
 
 app.UseRouting();
+app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.MapHub<ChatHub>("/chat");
+app.MapHub<CallHub>("/callHub");
 
 using (var scope = app.Services.CreateScope())
 {
