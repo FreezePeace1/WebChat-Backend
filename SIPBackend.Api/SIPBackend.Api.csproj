@@ -8,6 +8,7 @@
         <RootNamespace>SIPBackend</RootNamespace>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <UserSecretsId>1c08d6c5-2512-4b0b-b91a-1044f2779eef</UserSecretsId>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>

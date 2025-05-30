@@ -104,4 +104,25 @@
     <data name="TheseChatParticipantsDoNotExist" xml:space="preserve">
         <value>Этих участников чата не существует</value>
     </data>
+    <data name="GettingCallingStoryIsFailed" xml:space="preserve">
+        <value>Не удалось получить историю звонков</value>
+    </data>
+    <data name="CallingStoryAlreadyExists" xml:space="preserve">
+        <value>История звонков уже существует и не требует добавления в БД</value>
+    </data>
+    <data name="FailedToAddNewCallingStory" xml:space="preserve">
+        <value>Не удалось добавить новую историю звонков</value>
+    </data>
+    <data name="FailedToFindCallingStory" xml:space="preserve">
+        <value>Не удалось найти историю звонков</value>
+    </data>
+    <data name="FailedToEndCallingStory" xml:space="preserve">
+        <value>Не удалось закончить звонок</value>
+    </data>
+    <data name="FailedToCreateNewChatRoom" xml:space="preserve">
+        <value>Не удалось создать новую команту</value>
+    </data>
+    <data name="GettingUsersWebChatRoomIsFailed" xml:space="preserve">
+        <value>Получение комнаты пользователей неуспешно</value>
+    </data>
 </root>

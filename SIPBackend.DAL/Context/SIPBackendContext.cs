@@ -37,4 +37,6 @@ public class SIPBackendContext : IdentityDbContext<AppUser,IdentityRole,string>
     public DbSet<Chat> Chats { get; set; }
     public DbSet<ChatParticipants> ChatParticipants { get; set; }
     public DbSet<Message> Messages { get; set; }
+    public DbSet<CallingStory> CallingStories { get; set; }
+    public DbSet<WebChatRoom> WebChatRooms { get; set; }
 }

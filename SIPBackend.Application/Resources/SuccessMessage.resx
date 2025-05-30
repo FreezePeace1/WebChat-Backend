@@ -63,4 +63,19 @@
     <data name="GettingChatInfoIsSuccessful" xml:space="preserve">
         <value>Getting chat info is successful</value>
     </data>
+    <data name="GettingCallingStoryIsSuccessfull" xml:space="preserve">
+        <value>Getting calling story is successfull</value>
+    </data>
+    <data name="NewCallingStoryIsAddedSuccessfully" xml:space="preserve">
+        <value>New calling story is added successfully</value>
+    </data>
+    <data name="CallIsEndedSuccessfully" xml:space="preserve">
+        <value>Call is ended successfully</value>
+    </data>
+    <data name="NewChatRoomIsCreatedSuccessfully" xml:space="preserve">
+        <value>New chat room is create successfully</value>
+    </data>
+    <data name="GettingUsersWebChatRoomIsSuccessfull" xml:space="preserve">
+        <value>Getting users web chat room is successfull</value>
+    </data>
 </root>

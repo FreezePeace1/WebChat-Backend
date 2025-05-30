@@ -3,7 +3,9 @@
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=Core_002FSIPBackend_002EApplication_002FResources_002FErrorMessage/@EntryIndexedValue">True</s:Boolean>
 	
 	
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=Core_002FSIPBackend_002EApplication_002FResources_002FSuccessMessage/@EntryIndexedValue">False</s:Boolean>
+	
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=Core_002FSIPBackend_002EApplication_002FResources_002FSuccessMessage/@EntryIndexedValue">True</s:Boolean>
+	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=Core_002FSIPBackend_002EDomain_002FResources_002FErrorMessage/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=Core_002FSIPBackend_002EDomain_002FResources_002FErrorMessage/@EntryIndexRemoved">True</s:Boolean>
 	
@@ -20,4 +22,5 @@
 	<s:String x:Key="/Default/ResxEditorPersonal/DisabledLanguages/@EntryValue">ru-ru</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowOnlyErrors/@EntryValue">False</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowOnlyStringResources/@EntryValue">False</s:Boolean></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowOnlyStringResources/@EntryValue">False</s:Boolean>
+	</wpf:ResourceDictionary>

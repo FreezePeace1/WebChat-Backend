@@ -230,5 +230,47 @@ namespace SIPBackend.Application.Resources {
                 return ResourceManager.GetString("TheseChatParticipantsDoNotExist", resourceCulture);
             }
         }
+        
+        internal static string GettingCallingStoryIsFailed {
+            get {
+                return ResourceManager.GetString("GettingCallingStoryIsFailed", resourceCulture);
+            }
+        }
+        
+        internal static string CallingStoryAlreadyExists {
+            get {
+                return ResourceManager.GetString("CallingStoryAlreadyExists", resourceCulture);
+            }
+        }
+        
+        internal static string FailedToAddNewCallingStory {
+            get {
+                return ResourceManager.GetString("FailedToAddNewCallingStory", resourceCulture);
+            }
+        }
+        
+        internal static string FailedToFindCallingStory {
+            get {
+                return ResourceManager.GetString("FailedToFindCallingStory", resourceCulture);
+            }
+        }
+        
+        internal static string FailedToEndCallingStory {
+            get {
+                return ResourceManager.GetString("FailedToEndCallingStory", resourceCulture);
+            }
+        }
+        
+        internal static string FailedToCreateNewChatRoom {
+            get {
+                return ResourceManager.GetString("FailedToCreateNewChatRoom", resourceCulture);
+            }
+        }
+        
+        internal static string GettingUsersWebChatRoomIsFailed {
+            get {
+                return ResourceManager.GetString("GettingUsersWebChatRoomIsFailed", resourceCulture);
+            }
+        }
     }
 }

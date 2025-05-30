@@ -40,4 +40,13 @@ public enum ErrorCodes
     FailedToAcceptRequest = 406,
     FailedToGetAllUsersWithRequests = 407,
     
+    //CallingStoryService
+    GettingCallingStoryIsFailed = 500,
+    CallingStoryAlreadyExists = 501,
+    FailedToFindCallingStory = 502,
+    FailedToEndCallingStory = 503,
+    
+    //WebChatRoomService
+    FailedToCreateNewChatRoom = 600,
+    GettingUsersWebChatRoomIsFailed = 601,
 }

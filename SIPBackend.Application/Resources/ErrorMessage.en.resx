@@ -104,4 +104,25 @@
     <data name="TheseChatParticipantsDoNotExist" xml:space="preserve">
         <value>These chat participants do not exist</value>
     </data>
+    <data name="GettingCallingStoryIsFailed" xml:space="preserve">
+        <value>Getting calling story is failed</value>
+    </data>
+    <data name="CallingStoryAlreadyExists" xml:space="preserve">
+        <value>Calling story already exists </value>
+    </data>
+    <data name="FailedToAddNewCallingStory" xml:space="preserve">
+        <value>Failed to add new calling story</value>
+    </data>
+    <data name="FailedToFindCallingStory" xml:space="preserve">
+        <value>Failed to find calling story</value>
+    </data>
+    <data name="FailedToEndCallingStory" xml:space="preserve">
+        <value>Failed to end calling story</value>
+    </data>
+    <data name="FailedToCreateNewChatRoom" xml:space="preserve">
+        <value>Failed to create new chat room</value>
+    </data>
+    <data name="GettingUsersWebChatRoomIsFailed" xml:space="preserve">
+        <value>Getting users webchat room is failed</value>
+    </data>
 </root>

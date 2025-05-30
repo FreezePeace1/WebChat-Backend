@@ -134,5 +134,35 @@ namespace SIPBackend.DAL.Resources {
                 return ResourceManager.GetString("GettingChatInfoIsSuccessful", resourceCulture);
             }
         }
+        
+        internal static string GettingCallingStoryIsSuccessfull {
+            get {
+                return ResourceManager.GetString("GettingCallingStoryIsSuccessfull", resourceCulture);
+            }
+        }
+        
+        internal static string NewCallingStoryIsAddedSuccessfully {
+            get {
+                return ResourceManager.GetString("NewCallingStoryIsAddedSuccessfully", resourceCulture);
+            }
+        }
+        
+        internal static string CallIsEndedSuccessfully {
+            get {
+                return ResourceManager.GetString("CallIsEndedSuccessfully", resourceCulture);
+            }
+        }
+        
+        internal static string NewChatRoomIsCreatedSuccessfully {
+            get {
+                return ResourceManager.GetString("NewChatRoomIsCreatedSuccessfully", resourceCulture);
+            }
+        }
+        
+        internal static string GettingUsersWebChatRoomIsSuccessfull {
+            get {
+                return ResourceManager.GetString("GettingUsersWebChatRoomIsSuccessfull", resourceCulture);
+            }
+        }
     }
 }

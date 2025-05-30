@@ -13,7 +13,9 @@ public static class DependencyInjection
         services.AddTransient<Initializer>();
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<IRelationshipsService, RelationshipsService>();
-        
+        services.AddScoped<IWebChatRoomsService, WebChatRoomsService>();
+        services.AddScoped<ICallingStoryService, CallingStoryService>();
+
         return services;
     }
 }

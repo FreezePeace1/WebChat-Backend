@@ -3575,25 +3575,24 @@
     ]
   },
   "packageFolders": {
-    "/home/alexander/.nuget/packages/": {}
+    "/home/freezepeace/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/SIPBackend.DAL.csproj",
+      "projectUniqueName": "/home/freezepeace/RiderProjects/WebChat-Backend/SIPBackend.DAL/SIPBackend.DAL.csproj",
       "projectName": "SIPBackend.DAL",
-      "projectPath": "/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/SIPBackend.DAL.csproj",
-      "packagesPath": "/home/alexander/.nuget/packages/",
-      "outputPath": "/home/alexander/RiderProjects/SIPBackend/SIPBackend.DAL/obj/",
+      "projectPath": "/home/freezepeace/RiderProjects/WebChat-Backend/SIPBackend.DAL/SIPBackend.DAL.csproj",
+      "packagesPath": "/home/freezepeace/.nuget/packages/",
+      "outputPath": "/home/freezepeace/RiderProjects/WebChat-Backend/SIPBackend.DAL/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/alexander/.nuget/NuGet/NuGet.Config"
+        "/home/freezepeace/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/home/packages": {},
         "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -3601,8 +3600,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/SIPBackend.Domain.csproj": {
-              "projectPath": "/home/alexander/RiderProjects/SIPBackend/SIPBackend.Domain/SIPBackend.Domain.csproj"
+            "/home/freezepeace/RiderProjects/WebChat-Backend/SIPBackend.Domain/SIPBackend.Domain.csproj": {
+              "projectPath": "/home/freezepeace/RiderProjects/WebChat-Backend/SIPBackend.Domain/SIPBackend.Domain.csproj"
             }
           }
         }

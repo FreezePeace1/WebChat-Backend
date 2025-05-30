@@ -234,6 +234,33 @@ namespace SIPBackend.DAL.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("SIPBackend.Domain.Entities.CallingStory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime?>("EndedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("FirstParticipantId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("SecondParticipantId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CallingStories");
+                });
+
             modelBuilder.Entity("SIPBackend.Domain.Entities.Chat", b =>
                 {
                     b.Property<Guid>("ChatId")
@@ -327,6 +354,25 @@ namespace SIPBackend.DAL.Migrations
                     b.HasIndex("ChatId");
 
                     b.ToTable("Messages");
+                });
+
+            modelBuilder.Entity("SIPBackend.Domain.Entities.WebChatRoom", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("FirstParticipantId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("SecondParticipantId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("WebChatRooms");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -56,4 +56,19 @@
     <data name="GettingChatInfoIsSuccessful" xml:space="preserve">
         <value>Получение всей информации для чата успешно</value>
     </data>
+    <data name="GettingCallingStoryIsSuccessfull" xml:space="preserve">
+        <value>Получение истории звонков успешно</value>
+    </data>
+    <data name="NewCallingStoryIsAddedSuccessfully" xml:space="preserve">
+        <value>Новая история звонков добавлена успешно</value>
+    </data>
+    <data name="CallIsEndedSuccessfully" xml:space="preserve">
+        <value>Звонок завершен успешно</value>
+    </data>
+    <data name="NewChatRoomIsCreatedSuccessfully" xml:space="preserve">
+        <value>Новая комната создана успешно</value>
+    </data>
+    <data name="GettingUsersWebChatRoomIsSuccessfull" xml:space="preserve">
+        <value>Получение комнаты пользователей успешно</value>
+    </data>
 </root>
