@@ -164,5 +164,11 @@ namespace SIPBackend.DAL.Resources {
                 return ResourceManager.GetString("GettingUsersWebChatRoomIsSuccessfull", resourceCulture);
             }
         }
+        
+        internal static string GettingRoomInfoIsSuccessful {
+            get {
+                return ResourceManager.GetString("GettingRoomInfoIsSuccessful", resourceCulture);
+            }
+        }
     }
 }

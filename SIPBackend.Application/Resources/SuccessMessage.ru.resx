@@ -71,4 +71,7 @@
     <data name="GettingUsersWebChatRoomIsSuccessfull" xml:space="preserve">
         <value>Получение комнаты пользователей успешно</value>
     </data>
+    <data name="GettingRoomInfoIsSuccessful" xml:space="preserve">
+        <value>Получение информации о комнате успешно</value>
+    </data>
 </root>

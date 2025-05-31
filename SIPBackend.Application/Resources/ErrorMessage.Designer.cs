@@ -272,5 +272,11 @@ namespace SIPBackend.Application.Resources {
                 return ResourceManager.GetString("GettingUsersWebChatRoomIsFailed", resourceCulture);
             }
         }
+        
+        internal static string CallAlreadyExists {
+            get {
+                return ResourceManager.GetString("CallAlreadyExists", resourceCulture);
+            }
+        }
     }
 }

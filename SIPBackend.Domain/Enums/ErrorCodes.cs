@@ -45,6 +45,7 @@ public enum ErrorCodes
     CallingStoryAlreadyExists = 501,
     FailedToFindCallingStory = 502,
     FailedToEndCallingStory = 503,
+    CallAlreadyExists = 504,
     
     //WebChatRoomService
     FailedToCreateNewChatRoom = 600,

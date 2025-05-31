@@ -71,4 +71,7 @@
     <data name="GettingUsersWebChatRoomIsSuccessfull" xml:space="preserve">
         <value>Getting users web chat room is successfull</value>
     </data>
+    <data name="GettingRoomInfoIsSuccessful" xml:space="preserve">
+        <value>Getting room info is successful</value>
+    </data>
 </root>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SIPBackend.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d12fac34323aae0377cf2e0089c14f717c29130d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72cd684ad1bbc09220985a89d545bc2aae45cd39")]
 [assembly: System.Reflection.AssemblyProductAttribute("SIPBackend.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SIPBackend.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

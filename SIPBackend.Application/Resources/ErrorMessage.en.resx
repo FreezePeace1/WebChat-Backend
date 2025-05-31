@@ -125,4 +125,7 @@
     <data name="GettingUsersWebChatRoomIsFailed" xml:space="preserve">
         <value>Getting users webchat room is failed</value>
     </data>
+    <data name="CallAlreadyExists" xml:space="preserve">
+        <value>Call already exists</value>
+    </data>
 </root>

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using SIPBackend.Application.Interfaces;
 using SIPBackend.Domain.Dtos;
 using SIPBackend.Domain.Entities;
+using SIPBackend.Domain.Models;
 
 namespace SIPBackend.Controllers;
 
@@ -17,7 +18,7 @@ public class CallingStoryController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<ResponseDto<IReadOnlyList<CallingStory>>>> GetUserCallingStories(CancellationToken ct)
+    public async Task<ActionResult<ResponseDto<IReadOnlyList<CallingStoryModel>>>> GetUserCallingStories(CancellationToken ct)
     {
         var response = await _callingStoryService.GetUserCallingStoriesAsync(ct);
 

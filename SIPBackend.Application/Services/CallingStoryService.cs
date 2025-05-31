@@ -9,6 +9,7 @@ using SIPBackend.DAL.Resources;
 using SIPBackend.Domain;
 using SIPBackend.Domain.Dtos;
 using SIPBackend.Domain.Entities;
+using SIPBackend.Domain.Models;
 
 namespace SIPBackend.Application.Services;
 
@@ -70,7 +71,7 @@ public sealed class CallingStoryService : ICallingStoryService
         }
     }
     
-    public async Task<ResponseDto<IReadOnlyList<CallingStory>>> GetUserCallingStoriesAsync(CancellationToken ct)
+    public async Task<ResponseDto<IReadOnlyList<CallingStoryModel>>> GetUserCallingStoriesAsync(CancellationToken ct)
     {
         try
         {
@@ -78,7 +79,7 @@ public sealed class CallingStoryService : ICallingStoryService
 
             if (!userInCookie.IsSucceed)
             {
-                return new ResponseDto<IReadOnlyList<CallingStory>>()
+                return new ResponseDto<IReadOnlyList<CallingStoryModel>>()
                 {
                     ErrorCode = userInCookie.ErrorCode,
                     ErrorMessage = userInCookie.ErrorMessage,
@@ -87,11 +88,41 @@ public sealed class CallingStoryService : ICallingStoryService
 
             var callingStories = await _dbContext.CallingStories
                 .Where(x => x.FirstParticipantId == userInCookie.Data.Id
-                            || x.SecondParticipantId == userInCookie.Data.Id).ToListAsync(cancellationToken: ct);
+                            || x.SecondParticipantId == userInCookie.Data.Id)
+                .ToListAsync(cancellationToken: ct);
 
-            return new ResponseDto<IReadOnlyList<CallingStory>>()
+            var otherUserIds = callingStories
+                .Select(x => x.FirstParticipantId == userInCookie.Data.Id
+                    ? x.SecondParticipantId
+                    : x.FirstParticipantId)
+                .Distinct()
+                .ToList();
+            
+            var otherUsers = await _dbContext.Users.Where(x => otherUserIds.Contains(x.Id))
+                .ToDictionaryAsync(u => u.Id,u => u.UserName,cancellationToken: ct);
+
+            var neededCallingStories = new List<CallingStoryModel>(); 
+            foreach (var callingStory in callingStories)
             {
-                Data = callingStories,
+               var otherParticipantId = callingStory.FirstParticipantId == userInCookie.Data.Id
+                   ? callingStory.SecondParticipantId
+                   : callingStory.FirstParticipantId;
+
+               if (otherUsers.TryGetValue(otherParticipantId, out var userName))
+               {
+                   neededCallingStories.Add(new CallingStoryModel()
+                   {
+                       Id = callingStory.Id,
+                       SecondParticipantName = userName,
+                       CreatedAt = callingStory.CreatedAt,
+                       EndedAt = callingStory.EndedAt,
+                   });
+               }
+            }
+
+            return new ResponseDto<IReadOnlyList<CallingStoryModel>>()
+            {
+                Data = neededCallingStories.Distinct().ToList(),
                 SuccessMessage = SuccessMessage.GettingCallingStoryIsSuccessfull
             };
 
@@ -106,7 +137,7 @@ public sealed class CallingStoryService : ICallingStoryService
         {
            _logger.Error(e,e.Message);
 
-           return new ResponseDto<IReadOnlyList<CallingStory>>()
+           return new ResponseDto<IReadOnlyList<CallingStoryModel>>()
            {
                 ErrorMessage = ErrorMessage.GettingCallingStoryIsFailed,
                 ErrorCode = (int)ErrorCodes.GettingCallingStoryIsFailed
@@ -129,6 +160,21 @@ public sealed class CallingStoryService : ICallingStoryService
                 };
             }
 
+            var existingCall = await _dbContext.CallingStories
+                .AnyAsync(x => (x.FirstParticipantId == user.Data.Id
+                                           && x.SecondParticipantId == dto.SecondParticipantId
+                                           || x.SecondParticipantId == user.Data.Id
+                                           && x.FirstParticipantId == dto.SecondParticipantId)
+                                          && x.EndedAt == null);
+
+            if (existingCall)
+            {
+                return new ResponseDto()
+                {
+                    SuccessMessage = SuccessMessage.GettingRoomInfoIsSuccessful
+                };
+            }
+            
             var newCallingStory = new CallingStory()
             {
                 FirstParticipantId = user.Data.Id,

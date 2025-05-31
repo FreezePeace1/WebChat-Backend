@@ -125,4 +125,7 @@
     <data name="GettingUsersWebChatRoomIsFailed" xml:space="preserve">
         <value>Получение комнаты пользователей неуспешно</value>
     </data>
+    <data name="CallAlreadyExists" xml:space="preserve">
+        <value>Звонок уже существует</value>
+    </data>
 </root>
