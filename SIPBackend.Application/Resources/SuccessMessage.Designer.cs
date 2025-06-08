@@ -170,5 +170,11 @@ namespace SIPBackend.DAL.Resources {
                 return ResourceManager.GetString("GettingRoomInfoIsSuccessful", resourceCulture);
             }
         }
+        
+        internal static string GettingDataInCache {
+            get {
+                return ResourceManager.GetString("GettingDataInCache", resourceCulture);
+            }
+        }
     }
 }

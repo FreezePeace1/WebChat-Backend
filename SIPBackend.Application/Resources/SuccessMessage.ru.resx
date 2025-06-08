@@ -74,4 +74,7 @@
     <data name="GettingRoomInfoIsSuccessful" xml:space="preserve">
         <value>Получение информации о комнате успешно</value>
     </data>
+    <data name="GettingDataInCache" xml:space="preserve">
+        <value>Получили данные в кэше</value>
+    </data>
 </root>

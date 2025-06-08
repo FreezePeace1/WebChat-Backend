@@ -74,4 +74,7 @@
     <data name="GettingRoomInfoIsSuccessful" xml:space="preserve">
         <value>Getting room info is successful</value>
     </data>
+    <data name="GettingDataInCache" xml:space="preserve">
+        <value>Getting data in cache</value>
+    </data>
 </root>

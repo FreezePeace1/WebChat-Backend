@@ -135,4 +135,7 @@
     <data name="CallAlreadyExists" xml:space="preserve">
         <value>Call already exists</value>
     </data>
+    <data name="DataInCacheIsEmpty" xml:space="preserve">
+        <value>Data in cache is empty</value>
+    </data>
 </root>

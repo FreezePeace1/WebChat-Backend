@@ -1,8 +1,10 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using SIPBackend.Application.Interfaces;
 using SIPBackend.DAL.Context;
 using SIPBackend.Domain.Dtos;
@@ -17,15 +19,25 @@ public class ChatHub : Hub<IChatClient>
     private readonly SIPBackendContext _dbContext;
     private readonly UserManager<AppUser> _userManager;
     private readonly IHttpContextAccessor _httpContext;
-
+    private readonly IDistributedCache _cache;
+    
     public ChatHub(
         SIPBackendContext dbContext,
         UserManager<AppUser> userManager,
-        IHttpContextAccessor httpContext)
+        IHttpContextAccessor httpContext, IDistributedCache cache)
     {
         _dbContext = dbContext;
         _userManager = userManager;
         _httpContext = httpContext;
+        _cache = cache;
+    }
+
+    private DistributedCacheEntryOptions GetCacheOptions()
+    {
+        return new DistributedCacheEntryOptions()
+        {
+            AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(14)
+        };
     }
 
     public override async Task OnConnectedAsync()
@@ -64,6 +76,14 @@ public class ChatHub : Hub<IChatClient>
 
     public async Task<List<MessageDto>> GetAllMessages(Guid chatId)
     {
+        var cacheKey = $"chat_history_{chatId}";
+        var cachedHistory = await _cache.GetStringAsync(cacheKey);
+
+        if (!string.IsNullOrEmpty(cachedHistory))
+        {
+            return JsonSerializer.Deserialize<List<MessageDto>>(cachedHistory);
+        }
+        
         var query = from message in _dbContext.Messages
             join sender in _dbContext.Users on message.UserSenderId equals sender.Id
             where message.ChatId == chatId
@@ -76,36 +96,59 @@ public class ChatHub : Hub<IChatClient>
                 IsCurrentUser = false
             };
 
-        return await query.ToListAsync();
+        var messages = await query.ToListAsync();
+        
+        await _cache.SetStringAsync(cacheKey, JsonSerializer.Serialize(messages),GetCacheOptions());
+        
+        return messages;
     }
     public async Task SendMessage(string chatId, string message)
     {
         var user = await GetCurrentUser();
         if (user == null) return;
 
-        var chat = await _dbContext.Chats.FirstOrDefaultAsync(x => x.ChatId.ToString() == chatId);
+        if (!Guid.TryParse(chatId, out var parsedChatID))
+        {
+            return;
+        }
+        
+        var chat = await _dbContext.Chats
+            .Include(c => c.ChatParticipants)
+            .FirstOrDefaultAsync(x => x.ChatId.ToString() == chatId);
 
-        if (chat == null)
+        if (chat?.ChatParticipants == null)
         {
             return;
         }
 
-        var chatParts =
-            await _dbContext.ChatParticipants.FirstOrDefaultAsync(x => x.ChatParticipantsId == chat.ChatParticipantsId);
+        if (chat.ChatParticipants.FirstUserId != user.Id && 
+            chat.ChatParticipants.SecondUserId != user.Id)
+        {
+            return; // Пользователь не участник
+        }
+     
+        var consumerId = user.Id == chat.ChatParticipants.FirstUserId 
+            ? chat.ChatParticipants.SecondUserId 
+            : chat.ChatParticipants.FirstUserId;
 
-        var getConsumerId = user.Id == chatParts.FirstUserId ? chatParts.SecondUserId : chatParts.FirstUserId;
+        if (user.Id == consumerId)
+        {
+            return;
+        }
 
         var messageEntity = new Message
         {
-            ChatId = Guid.Parse(chatId),
+            ChatId = parsedChatID,
             Content = message,
             UserSenderId = user.Id,
-            UserConsumerId = getConsumerId,
+            UserConsumerId = consumerId,
             SentAt = DateTime.UtcNow
         };
 
         _dbContext.Messages.Add(messageEntity);
         await _dbContext.SaveChangesAsync();
+        
+        await _cache.RemoveAsync($"chat_history_{chatId}");
 
         await Clients.Group(chatId)
             .ReceiveMessage(user.UserName, message);
@@ -156,20 +199,40 @@ public class ChatHub : Hub<IChatClient>
             throw new HubException("Некорректный ID чата");
         }
 
-        var query = from message in _dbContext.Messages
-            join sender in _dbContext.Users 
-                on message.UserSenderId equals sender.Id into senderGroup
-            from sender in senderGroup.DefaultIfEmpty()
-            where message.ChatId == chatId
-            orderby message.SentAt
-            select new MessageDto {
-                Content = message.Content,
-                SentAt = message.SentAt,
-                SenderName = sender != null ? sender.UserName : "Неизвестный",
-                IsCurrentUser = false
-            };
+        var cacheKey = $"chat_history_{chatId}";
+        var cachedHistory = await _cache.GetStringAsync(cacheKey);
+        List<MessageDto>? dtos = null;
+        
+        if (!string.IsNullOrEmpty(cachedHistory))
+        {
+            dtos = JsonSerializer.Deserialize<List<MessageDto>>(cachedHistory);
+        }
 
-        var dtos = await query.ToListAsync();
+        if (dtos == null)
+        {
+            var query = from message in _dbContext.Messages
+                join sender in _dbContext.Users 
+                    on message.UserSenderId equals sender.Id into senderGroup
+                from sender in senderGroup.DefaultIfEmpty()
+                where message.ChatId == chatId
+                orderby message.SentAt
+                select new MessageDto {
+                    Content = message.Content,
+                    SentAt = message.SentAt,
+                    SenderName = sender != null ? sender.UserName : "Неизвестный",
+                    IsCurrentUser = false
+                };
+
+            dtos = await query.ToListAsync();
+            
+            await _cache.SetStringAsync(
+                cacheKey, 
+                JsonSerializer.Serialize(dtos), 
+                GetCacheOptions() 
+            );
+            
+        }
+        
         await Clients.Caller.LoadMessageHistory(dtos);
     }
 

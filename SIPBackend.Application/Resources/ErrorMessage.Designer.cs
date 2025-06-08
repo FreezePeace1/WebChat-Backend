@@ -278,5 +278,11 @@ namespace SIPBackend.Application.Resources {
                 return ResourceManager.GetString("CallAlreadyExists", resourceCulture);
             }
         }
+        
+        internal static string DataInCacheIsEmpty {
+            get {
+                return ResourceManager.GetString("DataInCacheIsEmpty", resourceCulture);
+            }
+        }
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SIPBackend.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72cd684ad1bbc09220985a89d545bc2aae45cd39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+641b64b3966b26eb00ca798948176077384ca247")]
 [assembly: System.Reflection.AssemblyProductAttribute("SIPBackend.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SIPBackend.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

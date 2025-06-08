@@ -128,4 +128,7 @@
     <data name="CallAlreadyExists" xml:space="preserve">
         <value>Звонок уже существует</value>
     </data>
+    <data name="DataInCacheIsEmpty" xml:space="preserve">
+        <value>Нет данных в кэше</value>
+    </data>
 </root>

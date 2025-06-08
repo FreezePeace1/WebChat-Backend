@@ -103,6 +103,26 @@ public class AuthService : IAuthService
             await _context.SaveChangesAsync();
 
             var accessToken = await GenerateAndSetAccessToken(user);
+            
+            var email = new MimeMessage();
+            email.From.Add(MailboxAddress.Parse(_configuration.GetSection("Gmail:EmailUsername").Value));
+            email.To.Add(MailboxAddress.Parse(user.Email));
+            email.Subject = "Message from ElectroStore";
+            email.Body = new TextPart(TextFormat.Html) { Text = "Вы успешно зарегались на хуйне.com Ваши credentials\n" +
+                                                                $"Логин: {dto.Email} Пароль: {dto.Password}" };
+
+            using var smtp = new SmtpClient();
+        
+            await smtp.ConnectAsync(_configuration.GetSection("Gmail:EmailHost").Value, 587,SecureSocketOptions.StartTls);
+        
+            await smtp.AuthenticateAsync(_configuration.GetSection("Gmail:EmailUsername").Value, _configuration.GetSection("Gmail:EmailPassword").Value);
+            await smtp.SendAsync(email);
+            await smtp.DisconnectAsync(true);
+
+            return new ResponseDto()
+            {
+                SuccessMessage = SuccessMessage.MessageWasSentSuccessfully
+            };
 
             return new ResponseDto()
             {

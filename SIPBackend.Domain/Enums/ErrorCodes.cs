@@ -50,4 +50,7 @@ public enum ErrorCodes
     //WebChatRoomService
     FailedToCreateNewChatRoom = 600,
     GettingUsersWebChatRoomIsFailed = 601,
+    
+    //CacheService
+    DataInCacheIsEmpty = 700,
 }

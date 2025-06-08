@@ -42,7 +42,8 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<RefreshTokenMiddleware>();
 
 app.UseCors(opts => opts
-    .WithOrigins("http://localhost:5173","https://localhost:5173")
+    .WithOrigins("http://localhost:5173","https://localhost:5173"
+        ,"https://d702bfaf84f2973ffe8992b17ead0db2.serveo.net")
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials());
